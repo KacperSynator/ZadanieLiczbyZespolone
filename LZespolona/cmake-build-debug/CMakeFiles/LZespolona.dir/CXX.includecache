@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kakkosbp/Pulpit/CLionProjects/LZespolona/BazaTestu.hh
+WyrazenieZesp.hh
+/home/kakkosbp/Pulpit/CLionProjects/LZespolona/WyrazenieZesp.hh
+
+/home/kakkosbp/Pulpit/CLionProjects/LZespolona/LZespolona.hh
+
+/home/kakkosbp/Pulpit/CLionProjects/LZespolona/Statystyki.cpp
+Statystyki.h
+/home/kakkosbp/Pulpit/CLionProjects/LZespolona/Statystyki.h
+
+/home/kakkosbp/Pulpit/CLionProjects/LZespolona/Statystyki.h
+
+/home/kakkosbp/Pulpit/CLionProjects/LZespolona/WyrazenieZesp.cpp
+WyrazenieZesp.hh
+/home/kakkosbp/Pulpit/CLionProjects/LZespolona/WyrazenieZesp.hh
+
+/home/kakkosbp/Pulpit/CLionProjects/LZespolona/WyrazenieZesp.hh
+LZespolona.hh
+/home/kakkosbp/Pulpit/CLionProjects/LZespolona/LZespolona.hh
+iostream
+-
+
+/home/kakkosbp/Pulpit/CLionProjects/LZespolona/main.cpp
+iostream
+-
+BazaTestu.hh
+/home/kakkosbp/Pulpit/CLionProjects/LZespolona/BazaTestu.hh
+Statystyki.h
+/home/kakkosbp/Pulpit/CLionProjects/LZespolona/Statystyki.h
+

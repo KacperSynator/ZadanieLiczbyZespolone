@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/LZespolona.dir/main.cpp.o CMakeFiles/LZespolona.dir/LZespolona.cpp.o CMakeFiles/LZespolona.dir/BazaTestu.cpp.o CMakeFiles/LZespolona.dir/WyrazenieZesp.cpp.o CMakeFiles/LZespolona.dir/Statystyki.cpp.o  -o LZespolona 

@@ -26,16 +26,23 @@ lz.im=im;
 return lz;
 }
 
-void Wyswietl(LZespolona lz)
+std::ostream & operator << (std::ostream & strm, const LZespolona & lz)
 {
-    std::cout<<'('<< lz.re<< std::showpos<< lz.im <<std::noshowpos <<"i)\n";
+    strm<<'('<<lz.re<<std::showpos<<lz.im<<std::noshowpos<<"i)";
+    return strm;
 }
-bool Wczytaj(LZespolona *lz)
+std::istream & operator >> (std::istream & strm, LZespolona & lz)
 {
-    char nawp,i,nawl;
-    std::cin >> nawl >> lz->re >> lz->im >> i >> nawp;
-    if(nawl != '(' || i != 'i' || nawp != ')' ) return false;
-    else return true;
+    char znak;
+    strm >> znak;
+    if (znak != '(') strm.setstate(std::ios::failbit);
+    strm >> lz.re;
+    strm >> lz.im;
+    strm >> znak;
+    if (znak != 'i') strm.setstate(std::ios::failbit);
+    strm >> znak;
+    if (znak != ')') strm.setstate(std::ios::failbit);
+    return strm;
 }
 void Sprzezenie(LZespolona *lz)
 {

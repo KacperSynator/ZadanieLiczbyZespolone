@@ -1,13 +1,22 @@
 #ifndef LZESPOLONA_STATYSTYKI_H
 #define LZESPOLONA_STATYSTYKI_H
 
+#include <iostream>
+
 
 class Statystyki{
 private:
+
     int dobre;
     int wszystkie;
 
+    float ZwrocWynik()
+    {
+        return (100*dobre/wszystkie);
+    }
+
 public:
+
 void Zeruj()
     {
         dobre=0;
@@ -23,9 +32,9 @@ void DodajWszystkie()
         wszystkie++;
     }
 
-float ZwrocWynik()
+void WyswietlWynik()
     {
-        return (100*dobre/wszystkie);
+        std::cout<<"Twoj wynik wynosi: "<<ZwrocWynik()<<"%\n";
     }
 
 

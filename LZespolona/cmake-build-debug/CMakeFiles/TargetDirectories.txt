@@ -1,3 +1,0 @@
-/home/kakkosbp/Pulpit/CLionProjects/LZespolona/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/kakkosbp/Pulpit/CLionProjects/LZespolona/cmake-build-debug/CMakeFiles/LZespolona.dir
-/home/kakkosbp/Pulpit/CLionProjects/LZespolona/cmake-build-debug/CMakeFiles/edit_cache.dir

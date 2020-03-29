@@ -30,11 +30,11 @@ LZespolona operator * (LZespolona l1, LZespolona l2);
 LZespolona operator / (LZespolona l1, LZespolona l2);
 bool operator  == (LZespolona l1,LZespolona l2);
 bool operator  != (LZespolona l1,LZespolona l2);
-LZespolona DzielenieRrzeczywiste(LZespolona lz, double lr);
+LZespolona operator / (LZespolona lz, double lr);
 LZespolona Utworz(double re, double im);
 std::ostream & operator << (std::ostream & strm, const LZespolona & lz);
 std::istream & operator >> (std::istream & strm, LZespolona & lz);
-void Sprzezenie(LZespolona *lz);
+LZespolona Sprzezenie(LZespolona lz);
 double Modul(LZespolona lz);
 
 

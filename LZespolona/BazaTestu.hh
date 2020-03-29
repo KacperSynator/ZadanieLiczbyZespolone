@@ -1,7 +1,7 @@
 #ifndef BAZATESTU_HH
 #define BAZATESTU_HH
 
-
+#include <fstream>
 #include "WyrazenieZesp.hh"
 
 
@@ -22,9 +22,16 @@ struct BazaTestu {
  * Inicjalizuje test powiazany z dana nazwa.
  */
 bool InicjalizujTest( BazaTestu  *wskBazaTestu, const char*  sNazwaTestu );
+
+
 /*
  * Udostepnia nastepne pytanie z bazy.
  */
 bool PobierzNastpnePytanie( BazaTestu  *wskBazaTestu,  WyrazenieZesp *wskWyr );
 
+
+
+
+bool InicjalizujTestPlik( const char*  sNazwaTestu,std::fstream & strm_plik );
+bool PobierzNastpnePytaniePlik(std::istream & strm, WyrazenieZesp *wskWyr );
 #endif

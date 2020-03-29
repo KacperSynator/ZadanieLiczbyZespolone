@@ -3,6 +3,8 @@
 #include <cassert>
 #include "BazaTestu.hh"
 
+#define DUZO 10000
+
 using namespace std;
 
 /*
@@ -77,6 +79,7 @@ bool InicjalizujTest( BazaTestu  *wskBazaTestu, const char *sNazwaTestu )
         UstawTest(wskBazaTestu,TestLatwy,sizeof(TestLatwy)/sizeof(WyrazenieZesp));
         return true;
     }
+
     /*
      * Analogicznie zrob inicjalizacje dla testu trudne
      */
@@ -112,5 +115,38 @@ bool PobierzNastpnePytanie( BazaTestu  *wskBazaTestu, WyrazenieZesp *wskWyrazeni
 
     *wskWyrazenie = wskBazaTestu->wskTabTestu[wskBazaTestu->IndeksPytania];
     ++wskBazaTestu->IndeksPytania;
+    return true;
+}
+
+/*****************************Z PLIKU*******************************************/
+bool InicjalizujTestPlik( const char*  sNazwaTestu,std::fstream & strm_plik)
+{
+    if(!strcmp(sNazwaTestu,"latwy"))
+    {
+        strm_plik.open("TestLatwy");
+        if (strm_plik.good()) return true;
+    }
+    if(!strcmp(sNazwaTestu,"trudny"))
+    {
+        strm_plik.open("TestTrudny");
+        if(strm_plik.good()) return true;
+    }
+
+
+    cerr << "Otwarcie testu '" << sNazwaTestu << "' nie powiodlo sie." << endl;
+    return false;
+}
+
+bool PobierzNastpnePytaniePlik(std::istream & strm, WyrazenieZesp *wskWyr )
+{
+    strm>>*wskWyr;
+    while(!strm.good() && !strm.eof())
+    {
+        cout<< "Bledne wyrazenie w pliku pobieranie następnego"<< endl;
+        strm.clear();
+        strm.ignore(DUZO,'\n');
+        strm>>*wskWyr;
+    }
+    if(strm.eof()) return false;
     return true;
 }

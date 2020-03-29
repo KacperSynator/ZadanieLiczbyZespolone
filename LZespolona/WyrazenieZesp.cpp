@@ -25,6 +25,9 @@ std::istream & operator >> (std::istream & strm, Operator & op)
         case '/':
             op=Op_Dziel;
             break;
+        default:
+            strm.setstate(std::ios::failbit);
+            break;
     }
     return strm;
 }
